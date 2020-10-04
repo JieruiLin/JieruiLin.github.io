@@ -20,7 +20,7 @@ Projects
 ======
 
 ### Fighting Copycat Agents in Behavioral Cloning from Multiple Observations 
-Chuan Wen*, Jierui Lin*, Trevor Darrell, Dinesh Jayaraman and Yang Gao 
+Chuan Wen\*, Jierui Lin\*, Trevor Darrell, Dinesh Jayaraman and Yang Gao 
 
 ![alt text](../images/copycat.png?raw=true)
 
