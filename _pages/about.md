@@ -22,7 +22,7 @@ News
 Projects
 ======
 
-### Fighting Copycat Agents in Behavioral Cloning from Multiple Observations 
+## Fighting Copycat Agents in Behavioral Cloning from Multiple Observations 
 Chuan Wen\*, Jierui Lin\*, Trevor Darrell, Dinesh Jayaraman and Yang Gao 
 
 ![alt text](../images/copycat.png?raw=true)
@@ -32,7 +32,7 @@ Chuan Wen\*, Jierui Lin\*, Trevor Darrell, Dinesh Jayaraman and Yang Gao
 To combat this ***copycat problem***, we propose an adversarial approach to learn a feature representation that removes excess information about the previous expert action nuisance correlate, while retaining the information necessary to predict the next action. In our experiments, our approach improves performance significantly across a variety of partially observed imitation learning tasks.
 
 
-### 3D Shape Reconstruction from Free-Hand Sketches
+## 3D Shape Reconstruction from Free-Hand Sketches
 Jiayun Wang, Jierui Lin, Qian Yu, Runtao Liu, Yubei Chen, Stella X. Yu
 
 ![alt text](../images/3d_reconstruction.png?raw=true)
