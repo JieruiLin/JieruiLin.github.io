@@ -23,8 +23,8 @@ Projects
 ======
 
 ## Fighting Copycat Agents in Behavioral Cloning from Multiple Observations 
-Chuan Wen\*, **Jierui Lin**\*, Trevor Darrell, Dinesh Jayaraman and Yang Gao 
-
+Chuan Wen\*, **Jierui Lin**\*, Trevor Darrell, Dinesh Jayaraman, Yang Gao   
+NeurIPS 2020
 
 ![alt text](../images/copycat.png?raw=true)
 
@@ -43,6 +43,18 @@ Jiayun Wang, **Jierui Lin**, Qian Yu, Runtao Liu, Yubei Chen, Stella X. Yu
 	<img src="../images/3d_result.png" alt="3d_result">
 </p>
 
-## 
+Sketches are the most abstract 2D representations of real-world objects. Although a sketch usually has geometrical distortion and lacks visual cues, humans can effortlessly envision a 3D object from it. 
 
+We pioneer to study this task and aim to enhance the power of sketches in 3D-related applications such as interactive design and VR/AR games. Further, we propose a novel sketch-based 3D reconstruction framework. Instead of distortion-free line drawings, synthesized sketches are adopted as input training data. Additionally, we propose a sketch standardization module to handle different sketch distortions and styles. Extensive experiments demonstrate the effectiveness of our model and its strong generalizability to various free-hand sketches.
 
+## Learning a Perception-Logic Network for Unsupervised Scene Conditioned Driving Behavior
+**Jierui Lin**\*, Yifei Xing\*, Huazhe Xu, Trevor Darrell, Yang Gao
+
+<p align="center">
+	<img src="../images/perception_logic.png" alt="perception-logic">
+</p>
+
+Human driving behavior can not be explained solely by traffic rules, rather, people take a lot of ***scene factors*** into account. Autonomous driving system should obtain those behaviors as well, since it not only ensures natural interactions with non-autonomous divers and pedestrians, but also improves driving safeness. 
+
+We propose to leverage only demonstrative driving data to unsupervisely learn those scene factors and combine the learned scene factors with a logic network, to finally output the driving behaviors. 
+Our experiments show that the proposed ***Perception-Logic*** network can unsupervisely learn meaningful scene factors and generalize almost perfectly in terms of scene conditioned behavior. The driving performance is significantly better than strong state-of-the-art baselines.
