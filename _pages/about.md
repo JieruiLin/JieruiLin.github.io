@@ -14,7 +14,10 @@ My research lies at the intersection of vision, robotics and machine learning. I
 
 News
 ======
+ 
 * Our recent paper ***Fighting Copycat Agents in Behavioral Cloning from Multiple Observations*** is accepted to NeurIPS 2020. Paper and code will be public soon!
+
+* I graduated from UC Berkeley with Highest Honors in Applied Mathematics, Honors in Computer Science and Highest Distinction in General Scholarship.
 
 Projects
 ======
@@ -27,3 +30,16 @@ Chuan Wen\*, Jierui Lin\*, Trevor Darrell, Dinesh Jayaraman and Yang Gao
 ***Copycat problem*** in an autonomous driving scenario: The vehicle waits at the red light and start to drive when the light turns green. A ***copycat*** policy which simply replays its previous action will predict all but one actions correctly while being useless when evaluated in the environment. 
 
 To combat this ***copycat problem***, we propose an adversarial approach to learn a feature representation that removes excess information about the previous expert action nuisance correlate, while retaining the information necessary to predict the next action. In our experiments, our approach improves performance significantly across a variety of partially observed imitation learning tasks.
+
+
+### 3D Shape Reconstruction from Free-Hand Sketches
+Jiayun Wang, Jierui Lin, Qian Yu, Runtao Liu, Yubei Chen, Stella X. Yu
+
+![alt text](../images/3d_reconstruction.png?raw=true)
+
+
+<p align="center">
+	<img src="../images/3d_result.png" alt="3d_result">
+</p>
+
+
