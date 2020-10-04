@@ -23,7 +23,8 @@ Projects
 ======
 
 ## Fighting Copycat Agents in Behavioral Cloning from Multiple Observations 
-Chuan Wen\*, Jierui Lin\*, Trevor Darrell, Dinesh Jayaraman and Yang Gao 
+Chuan Wen\*, **Jierui Lin**\*, Trevor Darrell, Dinesh Jayaraman and Yang Gao 
+
 
 ![alt text](../images/copycat.png?raw=true)
 
@@ -33,7 +34,7 @@ To combat this ***copycat problem***, we propose an adversarial approach to lear
 
 
 ## 3D Shape Reconstruction from Free-Hand Sketches
-Jiayun Wang, Jierui Lin, Qian Yu, Runtao Liu, Yubei Chen, Stella X. Yu
+Jiayun Wang, **Jierui Lin**, Qian Yu, Runtao Liu, Yubei Chen, Stella X. Yu
 
 ![alt text](../images/3d_reconstruction.png?raw=true)
 
@@ -41,5 +42,7 @@ Jiayun Wang, Jierui Lin, Qian Yu, Runtao Liu, Yubei Chen, Stella X. Yu
 <p align="center">
 	<img src="../images/3d_result.png" alt="3d_result">
 </p>
+
+## 
 
 
