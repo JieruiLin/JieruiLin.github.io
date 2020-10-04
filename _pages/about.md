@@ -45,10 +45,11 @@ Jiayun Wang, **Jierui Lin**, Qian Yu, Runtao Liu, Yubei Chen, Stella X. Yu
 
 Sketches are the most abstract 2D representations of real-world objects. Although a sketch usually has geometrical distortion and lacks visual cues, humans can effortlessly envision a 3D object from it. 
 
-We pioneer to study this task and aim to enhance the power of sketches in 3D-related applications such as interactive design and VR/AR games. Further, we propose a novel sketch-based 3D reconstruction framework. Instead of distortion-free line drawings, synthesized sketches are adopted as input training data. Additionally, we propose a sketch standardization module to handle different sketch distortions and styles. Extensive experiments demonstrate the effectiveness of our model and its strong generalizability to various free-hand sketches.
+We pioneer to study this task and aim to enhance the power of sketches in 3D-related applications such as interactive design and VR/AR games. Further, we propose a novel sketch-based 3D reconstruction framework (shown above). Extensive experiments demonstrate the effectiveness of our model and its strong generalizability to various free-hand sketches.
 
 ## Learning a Perception-Logic Network for Unsupervised Scene Conditioned Driving Behavior
-**Jierui Lin**\*, Yifei Xing\*, Huazhe Xu, Trevor Darrell, Yang Gao
+**Jierui Lin**\*, Yifei Xing\*, Huazhe Xu, Trevor Darrell, Yang Gao   
+
 
 <p align="center">
 	<img src="../images/perception_logic.png" alt="perception-logic">
