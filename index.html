@@ -1,63 +1,150 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Jierui Lin</title>
-  
-  <meta name="author" content="Jierui Lin">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+  <title>Jierui Lin</title>
+  <meta name="author" content="Jierui Lin">
+  <meta name="description" content="Jierui Lin — Senior Machine Learning Researcher at Apple working on machine learning, LLMs, and AI for Science.">
+  <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
+
+  <meta property="og:title" content="Jierui Lin">
+  <meta property="og:description" content="Senior Machine Learning Researcher at Apple — ML, LLMs, and AI for Science.">
+  <meta property="og:image" content="images/jerry.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+
+  <!-- Apply saved theme before first paint to avoid a flash -->
+  <script>
+    (() => {
+      const saved = localStorage.getItem("theme");
+      const dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <script src="main.js" defer></script>
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Jierui Lin</name>
-              </p>
-              <p>I am a senior machine learning researcher in Physical Intelligence (PHI) led by <a href="https://vladlen.info/">Vladlen Koltun</a> at Apple, where I work on Machine Learning, LLM, and AI for Science.
-              </p>
-              <p>
-                I obtained my Master's degree in Computer Science from <a href="https://www.utexas.edu">UT Austin</a>, advised by Prof. <a href="http://www.philkr.net">Philipp Krähenbühl</a> and Prof. <a href="https://www.cs.utexas.edu/~yukez/">Yuke Zhu</a>.
-                Prior to that, I obtained my Bachelor's degree in Computer Science and Applied Mathematics from <a href="https://www.berkeley.edu">UC Berkeley</a>, where I'm fortunate to work with Prof. <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a>
-                and Prof. <a href="http://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a>.
-              </p>
-              <p style="text-align:center">
-                <a href="mailto:jierui_lin@apple.com">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=Nr_yTQgAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/JieruiLin">Twitter</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/jierui-lin-b68b56298/">LinkedIn</a> &nbsp/&nbsp
-                <a href="https://github.com/JieruiLin">Github</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/jerry.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/jerry.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-				
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one"><img src='images/tract.png' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <papertitle>TRACT: Denoising Diffusion Models with Transitive Closure Time-Distillation</papertitle>
-          
-              <br>
+  <header class="nav">
+    <div class="nav__inner">
+      <nav aria-label="Sections">
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#honors">Honors</a></li>
+          <li><a href="#service">Service</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12H4M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ───────────── Hero ───────────── -->
+    <section class="hero" id="about">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__inner container">
+        <div class="hero__text reveal">
+          <p class="eyebrow">Senior ML Researcher · Apple</p>
+          <h1 class="hero__name">Jierui <span class="gradient-text">Lin</span></h1>
+          <p class="hero__tagline">
+            Working on <span class="typed" data-words='["Machine Learning","Large Language Models","AI for Science"]'>Machine Learning</span><span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <div class="bio">
+            <p>
+              I am a senior machine learning researcher in Physical Intelligence (PHI) led by
+              <a href="https://vladlen.info/">Vladlen Koltun</a> at Apple, where I work on Machine Learning, LLM, and AI for Science.
+            </p>
+            <p>
+              I obtained my Master's degree in Computer Science from <a href="https://www.utexas.edu">UT Austin</a>,
+              advised by Prof. <a href="http://www.philkr.net">Philipp Krähenbühl</a> and Prof.
+              <a href="https://www.cs.utexas.edu/~yukez/">Yuke Zhu</a>.
+              Prior to that, I obtained my Bachelor's degree in Computer Science and Applied Mathematics from
+              <a href="https://www.berkeley.edu">UC Berkeley</a>, where I'm fortunate to work with Prof.
+              <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a> and Prof.
+              <a href="http://people.eecs.berkeley.edu/~malik/">Jitendra Malik</a>.
+            </p>
+          </div>
+
+          <ul class="socials">
+            <li><a class="social" href="mailto:jierui_lin@apple.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>Email</a></li>
+            <li><a class="social" href="https://scholar.google.com/citations?user=Nr_yTQgAAAAJ&amp;hl=en">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1.5 9.5 12 16l10.5-6.5L12 3Z"/><path d="M6 12.3V17c0 1.7 2.7 3.5 6 3.5s6-1.8 6-3.5v-4.7"/></svg>Scholar</a></li>
+            <li><a class="social" href="https://twitter.com/JieruiLin">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 3.5h4.8l12.2 17H15.7L3.5 3.5ZM20 3.5l-6.6 7.4M10.5 13.6 4 20.5"/></svg>Twitter</a></li>
+            <li><a class="social" href="https://www.linkedin.com/in/jierui-lin-b68b56298/">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M11.5 16.5v-6M11.5 13c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5v3.5"/></svg>LinkedIn</a></li>
+            <li><a class="social" href="https://github.com/JieruiLin">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub</a></li>
+          </ul>
+        </div>
+
+        <div class="hero__photo reveal" style="--delay: 120ms">
+          <div class="avatar">
+            <img src="images/jerry.jpg" alt="Portrait of Jierui Lin" width="400" height="400">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Research ───────────── -->
+    <section class="section container" id="research">
+      <div class="section__head reveal">
+        <h2 class="section__title">Research</h2>
+        <div class="filters" role="group" aria-label="Filter publications">
+          <button class="chip is-active" data-filter="all">All</button>
+          <button class="chip" data-filter="science">AI for Science</button>
+          <button class="chip" data-filter="generative">Generative Models</button>
+          <button class="chip" data-filter="robotics">Robotics</button>
+          <button class="chip" data-filter="vision">3D Vision</button>
+        </div>
+      </div>
+
+      <ol class="pubs">
+        <li class="pub reveal" data-tags="science generative">
+          <a class="pub__thumb pub__thumb--fill" href="https://arxiv.org/abs/2610.38775"><img src="images/fitzroy_web.jpg" alt="FitzRoy precipitation forecast over the continental United States" loading="lazy"></a>
+          <div class="pub__body">
+            <div class="pub__meta"><span class="venue">arXiv</span><span class="year">2026</span></div>
+            <h3 class="pub__title"><a href="https://arxiv.org/abs/2610.38775">Skillful and Realistic Precipitation Forecasting with Reinforced Diffusion</a></h3>
+            <p class="pub__authors">
+              Ozan Sener,
+              Anand Avati*,
+              David Hafner*,
+              <strong>Jierui Lin*</strong>,
+              Laura Manduchi*,
+              Xiaoying Pang*,
+              Langwen Huang,
+              Torsten Hoefler,
+              Russ Schumacher,
+              <a href="https://vladlen.info/">Vladlen Koltun</a>
+            </p>
+            <div class="pub__links">
+              <a class="pill" href="https://arxiv.org/abs/2610.38775">arXiv</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub reveal" data-tags="generative">
+          <a class="pub__thumb" href="https://arxiv.org/abs/2303.04248"><img src="images/tract.png" alt="TRACT diagram" loading="lazy"></a>
+          <div class="pub__body">
+            <div class="pub__meta"><span class="venue">arXiv</span><span class="year">2023</span></div>
+            <h3 class="pub__title"><a href="https://arxiv.org/abs/2303.04248">TRACT: Denoising Diffusion Models with Transitive Closure Time-Distillation</a></h3>
+            <p class="pub__authors">
               <a href="https://david-berthelot.github.io">David Berthelot</a>,
               <a href="https://www.linkedin.com/in/arnaud-autef-3aa5aa12b/">Arnaud Autef</a>,
               <strong>Jierui Lin</strong>,
@@ -67,190 +154,150 @@
               <a href="https://www.linkedin.com/in/danielzheng256/">Daniel Zheng</a>,
               <a href="https://www.linkedin.com/in/walter-talbott-678b8aa8/">Walter Talbott</a>,
               <a href="https://www.linkedin.com/in/ericyuegu/">Eric Gu</a>
-              <br>
-              <em>arXiv Preprint</em>, 2023 &nbsp
-              <br>
-              <a href="https://arxiv.org/abs/2303.04248">arXiv</a>
-              <p></p>
-            </td>
-          </tr>
+            </p>
+            <div class="pub__links">
+              <a class="pill" href="https://arxiv.org/abs/2303.04248">arXiv</a>
+            </div>
+          </div>
+        </li>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one"><img src='images/sketch.png' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <papertitle>3D Shape Reconstruction from Free-Hand Sketches</papertitle>
-
-              <br>
+        <li class="pub reveal" data-tags="vision">
+          <a class="pub__thumb" href="https://arxiv.org/abs/2006.09694"><img src="images/sketch.png" alt="Sketch to 3D shape reconstruction" loading="lazy"></a>
+          <div class="pub__body">
+            <div class="pub__meta"><span class="venue">ECCV Workshop</span><span class="year">2022</span></div>
+            <h3 class="pub__title"><a href="https://arxiv.org/abs/2006.09694">3D Shape Reconstruction from Free-Hand Sketches</a></h3>
+            <p class="pub__authors">
               <a href="http://pwang.pw">Jiayun Wang</a>,
               <strong>Jierui Lin</strong>,
               <a href="https://yuqian1023.github.io//">Qian Yu</a>,
               Runtao Liu,
               <a href="https://redwood.berkeley.edu/people/yubei-chen/">Yubei Chen</a>,
               <a href="https://www1.icsi.berkeley.edu/~stellayu/">Stella X. Yu</a>
-              <br>
-              <em>ECCV Workshop</em>, 2022 &nbsp
-              <br>
-              <a href="https://arxiv.org/abs/2006.09694">arXiv</a>
-              /
-              <a href="https://web.eecs.umich.edu/~stellayu/publication/doc/2022shapeSketchSlides.pdf">slides</a>
-              /
-              <a href="https://github.com/samaonline/3D-Shape-Reconstruction-from-Free-Hand-Sketches">code</a>
-              <p></p>
-            </td>
-          </tr>
+            </p>
+            <div class="pub__links">
+              <a class="pill" href="https://arxiv.org/abs/2006.09694">arXiv</a>
+              <a class="pill" href="https://web.eecs.umich.edu/~stellayu/publication/doc/2022shapeSketchSlides.pdf">slides</a>
+              <a class="pill" href="https://github.com/samaonline/3D-Shape-Reconstruction-from-Free-Hand-Sketches">code</a>
+            </div>
+          </div>
+        </li>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one"><img src='images/fighting_fire.png' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <papertitle>Fighting Fire with Fire: Avoiding DNN Shortcuts through Priming</papertitle>
-              <br>
+        <li class="pub reveal" data-tags="robotics">
+          <a class="pub__thumb" href="https://arxiv.org/abs/2206.10816"><img src="images/fighting_fire.png" alt="Fighting Fire with Fire overview" loading="lazy"></a>
+          <div class="pub__body">
+            <div class="pub__meta"><span class="venue venue--top">ICML</span><span class="year">2022</span></div>
+            <h3 class="pub__title"><a href="https://arxiv.org/abs/2206.10816">Fighting Fire with Fire: Avoiding DNN Shortcuts through Priming</a></h3>
+            <p class="pub__authors">
               <a href="https://alvinwen428.github.io">Chuan Wen</a>,
               <a href="https://www.linkedin.com/in/jianing-qian-105782a3/">Jianing Qian</a>,
               <strong>Jierui Lin</strong>,
               <a href="https://www.tengjiaye.com">Jiaye Teng</a>,
               <a href="https://www.seas.upenn.edu/~dineshj/">Dinesh Jayaraman</a>,
               <a href="https://yang-gao.weebly.com">Yang Gao</a>
-              <br>
-              <em>ICML</em>, 2022 &nbsp
-              <br>
-              <a href="https://arxiv.org/abs/2206.10816">arXiv</a>
-              /
-              <a href="https://sites.google.com/view/icml22-fighting-fire-with-fire/">website</a>
-              /
-              <a href="https://github.com/AlvinWen428/fighting-fire-with-fire">code</a>
-              <p></p>
-            </td>
-          </tr>
+            </p>
+            <div class="pub__links">
+              <a class="pill" href="https://arxiv.org/abs/2206.10816">arXiv</a>
+              <a class="pill" href="https://sites.google.com/view/icml22-fighting-fire-with-fire/">website</a>
+              <a class="pill" href="https://github.com/AlvinWen428/fighting-fire-with-fire">code</a>
+            </div>
+          </div>
+        </li>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one"><img src='images/point_drive.png' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <papertitle>PointDrive: A Point-based Self-driving Policy</papertitle>
-              <br>
-              <strong>Jierui Lin</strong>
-              <br>
-              <em>Master's Thesis</em>, 2022 &nbsp
-              <br>
-              <a href="https://repositories.lib.utexas.edu/handle/2152/116764">arXiv</a>
-              <p></p>
-            </td>
-          </tr>
+        <li class="pub reveal" data-tags="robotics">
+          <a class="pub__thumb" href="https://repositories.lib.utexas.edu/handle/2152/116764"><img src="images/point_drive.png" alt="PointDrive architecture" loading="lazy"></a>
+          <div class="pub__body">
+            <div class="pub__meta"><span class="venue">Master's Thesis</span><span class="year">2022</span></div>
+            <h3 class="pub__title"><a href="https://repositories.lib.utexas.edu/handle/2152/116764">PointDrive: A Point-based Self-driving Policy</a></h3>
+            <p class="pub__authors"><strong>Jierui Lin</strong></p>
+            <div class="pub__links">
+              <a class="pill" href="https://repositories.lib.utexas.edu/handle/2152/116764">thesis</a>
+            </div>
+          </div>
+        </li>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one"><img src='images/keyframe.png' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <papertitle>Keyframe-Focused Visual Imitation Learning</papertitle>
-              <br>
+        <li class="pub reveal" data-tags="robotics">
+          <a class="pub__thumb" href="https://arxiv.org/abs/2106.06452"><img src="images/keyframe.png" alt="Keyframe-focused imitation overview" loading="lazy"></a>
+          <div class="pub__body">
+            <div class="pub__meta"><span class="venue venue--top">ICML</span><span class="year">2021</span></div>
+            <h3 class="pub__title"><a href="https://arxiv.org/abs/2106.06452">Keyframe-Focused Visual Imitation Learning</a></h3>
+            <p class="pub__authors">
               <a href="https://alvinwen428.github.io">Chuan Wen*</a>,
               <strong>Jierui Lin*</strong>,
               <a href="https://www.linkedin.com/in/jianing-qian-105782a3/">Jianing Qian</a>,
               <a href="https://yang-gao.weebly.com">Yang Gao</a>,
               <a href="https://www.seas.upenn.edu/~dineshj/">Dinesh Jayaraman</a>
-              <br>
-              <em>ICML</em>, 2021 &nbsp
-              <br>
-              <a href="https://arxiv.org/abs/2106.06452">arXiv</a>
-              /
-              <a href="https://sites.google.com/view/keyframe-focused-imitation">website</a>
-              /
-              <a href="https://github.com/AlvinWen428/keyframe-focused-imitation-learning">code</a>
-              <p></p>
-            </td>
-          </tr>
+            </p>
+            <div class="pub__links">
+              <a class="pill" href="https://arxiv.org/abs/2106.06452">arXiv</a>
+              <a class="pill" href="https://sites.google.com/view/keyframe-focused-imitation">website</a>
+              <a class="pill" href="https://github.com/AlvinWen428/keyframe-focused-imitation-learning">code</a>
+            </div>
+          </div>
+        </li>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:top">
-              <div class="one"><img src='images/copycat.png' width="160"></div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <papertitle>
-                Fighting Copycat Agents in Behavioral Cloning from Observation Histories</papertitle>
-              <br>
+        <li class="pub reveal" data-tags="robotics">
+          <a class="pub__thumb" href="https://arxiv.org/abs/2010.14876"><img src="images/copycat.png" alt="Copycat agents overview" loading="lazy"></a>
+          <div class="pub__body">
+            <div class="pub__meta"><span class="venue venue--top">NeurIPS</span><span class="year">2020</span></div>
+            <h3 class="pub__title"><a href="https://arxiv.org/abs/2010.14876">Fighting Copycat Agents in Behavioral Cloning from Observation Histories</a></h3>
+            <p class="pub__authors">
               <a href="https://alvinwen428.github.io">Chuan Wen*</a>,
               <strong>Jierui Lin*</strong>,
               <a href="https://people.eecs.berkeley.edu/~trevor/">Trevor Darrell</a>,
               <a href="https://www.seas.upenn.edu/~dineshj/">Dinesh Jayaraman</a>,
               <a href="https://yang-gao.weebly.com">Yang Gao</a>
-              <br>
-              <em>NeurIPS</em>, 2020 &nbsp
-              <br>
-              <a href="https://arxiv.org/abs/2010.14876">arXiv</a>
-              /
-              <a href="https://sites.google.com/view/fighting-copycat-agents/">website</a>
-              /
-              <a href="https://github.com/AlvinWen428/fighting-copycat-agents">code</a>
-              <p></p>
-            </td>
-          </tr>
-                
-          
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Honors & Awards</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-          
-          <tr>
-            <td width="100%" valign="center">
-              Highest Honor in Applied Mathematics from UC Berkeley
-            </td>
-          </tr>
-          <tr>
-            <td width="100%" valign="center">
-              Honor in Computer Science from UC Berkeley
-            </td>
-          </tr>
-          
-          
-        </tbody></table>
+            </p>
+            <div class="pub__links">
+              <a class="pill" href="https://arxiv.org/abs/2010.14876">arXiv</a>
+              <a class="pill" href="https://sites.google.com/view/fighting-copycat-agents/">website</a>
+              <a class="pill" href="https://github.com/AlvinWen428/fighting-copycat-agents">code</a>
+            </div>
+          </div>
+        </li>
+      </ol>
+      <p class="footnote reveal">* denotes equal contribution</p>
+    </section>
 
-				
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Service</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-					
-          <tr>
-            <td width="100%" valign="center">
-              Reviewer for NeurIPS, ICLR, ICML, CVPR, ICCV, ECCV, ACCV
-            </td>
-          </tr>
-          <tr>
-            <td width="100%" valign="center">
-              Teaching Assistant for CS 170 (Algorithms), CS 188 (AI) at UC Berkeley, CS 342 (Neural Networks), CS 343 (AI) at UT Austin
-            </td>
-          </tr>
-					
-					
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:middle;font-size:small;">
-                Design and source code from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+    <!-- ───────────── Honors & Service ───────────── -->
+    <div class="container grid-2">
+      <section class="section" id="honors">
+        <h2 class="section__title reveal">Honors &amp; Awards</h2>
+        <ul class="cards">
+          <li class="card reveal">
+            <span class="card__icon" aria-hidden="true">🏅</span>
+            <div><strong>Highest Honor</strong> in Applied Mathematics<span class="card__sub">UC Berkeley</span></div>
+          </li>
+          <li class="card reveal">
+            <span class="card__icon" aria-hidden="true">🎓</span>
+            <div><strong>Honor</strong> in Computer Science<span class="card__sub">UC Berkeley</span></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="service">
+        <h2 class="section__title reveal">Service</h2>
+        <ul class="cards">
+          <li class="card reveal">
+            <span class="card__icon" aria-hidden="true">📝</span>
+            <div><strong>Reviewer</strong>
+              <div class="tags"><span>NeurIPS</span><span>ICLR</span><span>ICML</span><span>CVPR</span><span>ICCV</span><span>ECCV</span><span>ACCV</span></div>
+            </div>
+          </li>
+          <li class="card reveal">
+            <span class="card__icon" aria-hidden="true">👨‍🏫</span>
+            <div><strong>Teaching Assistant</strong>
+              <span class="card__sub">UC Berkeley — CS 170 (Algorithms), CS 188 (AI)</span>
+              <span class="card__sub">UT Austin — CS 342 (Neural Networks), CS 343 (AI)</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year">2026</span> Jierui Lin</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
 </body>
-
 </html>
