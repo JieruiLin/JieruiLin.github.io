@@ -137,6 +137,17 @@ a:hover { background-size: 100% 1px; }
   gap: 1rem;
 }
 
+.nav__logo {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: none;
+  transition: opacity 0.2s ease;
+}
+.nav__logo:hover { opacity: 0.65; }
+.nav__logo svg { width: 22px; height: 22px; fill: currentColor; }
+
 .nav nav { margin-left: auto; }
 .nav__links { display: flex; gap: 0.25rem; }
 .nav__links a {
@@ -620,6 +631,7 @@ a:hover { background-size: 100% 1px; }
   .nav__links { gap: 0; }
   .nav__links a { padding: 0.4rem 0.55rem; font-size: 0.82rem; }
   .theme-toggle { width: 36px; height: 36px; }
+  .nav__logo svg { width: 20px; height: 20px; }
 
   .hero__photo { max-width: 160px; }
   .bio p { text-align: left; }
@@ -645,6 +657,12 @@ a:hover { background-size: 100% 1px; }
   .pill { padding: 0.4rem 0.85rem; } /* bigger tap targets */
 
   .footer { flex-direction: column-reverse; text-align: center; }
+}
+
+/* Narrow phones: tighten nav so logo, links and toggle fit on one row */
+@media (max-width: 400px) {
+  .nav__inner { gap: 0.5rem; }
+  .nav__links a { padding-inline: 0.4rem; }
 }
 
 /* Touch devices: no hover lift (avoids sticky hover states) */
