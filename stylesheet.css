@@ -376,7 +376,7 @@ a:hover { background-size: 100% 1px; }
 
 .pub {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 280px 1fr;
   gap: 1.5rem;
   padding: 1.25rem;
   border-radius: var(--radius);
@@ -393,12 +393,12 @@ a:hover { background-size: 100% 1px; }
 .pub.is-hidden { display: none; }
 
 .pub__thumb {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 16 / 10;
-  padding: 0.75rem;
+  /* uniform 2:1 tile; most figures are wide, so this keeps letterboxing small */
+  display: block;
+  aspect-ratio: 2 / 1;
+  align-self: start;
   border-radius: 12px;
-  background: #fff; /* figures have transparent/white backgrounds */
+  background: #fff; /* figures have white backgrounds, so any spare space blends in */
   overflow: hidden;
   border: 1px solid var(--border);
 }
@@ -408,10 +408,9 @@ a:hover { background-size: 100% 1px; }
   object-fit: contain;
   transition: transform 0.4s ease;
 }
-/* edge-to-edge figures (e.g. maps) that shouldn't sit on a white mat */
-.pub__thumb--fill { padding: 0; }
+/* full-bleed figures (e.g. maps) fill the tile instead */
 .pub__thumb--fill img { object-fit: cover; }
-.pub:hover .pub__thumb img { transform: scale(1.05); }
+.pub:hover .pub__thumb img { transform: scale(1.03); }
 
 .pub__body { display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
 
@@ -611,7 +610,7 @@ a:hover { background-size: 100% 1px; }
   .bio p { margin-inline: auto; }
   .socials { justify-content: center; }
   .grid-2 { grid-template-columns: 1fr; }
-  .pub { grid-template-columns: 200px 1fr; }
+  .pub { grid-template-columns: 220px 1fr; }
 }
 
 /* Phones */
