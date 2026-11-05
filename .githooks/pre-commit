@@ -1,0 +1,17 @@
+#!/bin/sh
+# Cache-busting: stamp index.html's links to stylesheet.css and main.js with a
+# hash of each file's contents, so browsers fetch fresh copies after a change.
+set -e
+cd "$(git rev-parse --show-toplevel)"
+
+stamp() {
+  file="$1"
+  # hash the staged version (what's actually being committed)
+  hash=$(git show ":$file" 2>/dev/null | shasum | cut -c1-8)
+  [ -n "$hash" ] || return 0
+  sed -i '' -E "s#(\"$file)(\?v=[0-9a-f]*)?\"#\1?v=$hash\"#" index.html
+}
+
+stamp stylesheet.css
+stamp main.js
+git add index.html
