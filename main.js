@@ -74,6 +74,23 @@ function initTyped() {
   })();
 }
 
+/* ---------- Paper summary toggles ---------- */
+function initSummaries() {
+  for (const btn of $$(".pill--toggle")) {
+    const panel = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!panel) continue;
+    // Swap `hidden` for a CSS-animated collapse; `inert` keeps closed content out of tab order
+    panel.hidden = false;
+    panel.inert = true;
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", open);
+      panel.classList.toggle("is-open", open);
+      panel.inert = !open;
+    });
+  }
+}
+
 /* ---------- Publication filters ---------- */
 function initFilters() {
   const chips = $$(".chip");
@@ -173,5 +190,6 @@ initScroll();
 initReveal();
 initTyped();
 initFilters();
+initSummaries();
 initNetwork();
 $("#year").textContent = new Date().getFullYear();

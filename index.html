@@ -135,6 +135,19 @@
             </p>
             <div class="pub__links">
               <a class="pill" href="https://arxiv.org/abs/2610.38775">arXiv</a>
+              <button class="pill pill--toggle" type="button" aria-expanded="false" aria-controls="sum-fitzroy">Summary</button>
+            </div>
+            <div class="pub__summary" id="sum-fitzroy" hidden>
+              <div class="pub__summary-inner">
+                <p>Physics-based weather models struggle to resolve small-scale convection, while machine-learning forecasters tend to produce blurry, physically inconsistent fields that underestimate extreme rainfall. FitzRoy resolves this trade-off with a reinforced diffusion framework, in which a conditional discrete diffusion model is refined with reinforcement learning. Over the continental United States, it matches or exceeds state-of-the-art skill at lead times up to 24 hours while keeping forecasts structurally realistic.</p>
+                <h4>Key contributions</h4>
+                <ul>
+                  <li>First system to achieve both state-of-the-art predictive skill and physical realism for precipitation over the continental US.</li>
+                  <li>A reinforced diffusion framework (discrete diffusion + RL refinement) that resolves the trade-off between pointwise accuracy and structural fidelity.</li>
+                  <li>Captures extreme events, signaling record-breaking accumulations in the 2025 Texas Hill Country and 2026 Missouri floods that existing models largely missed.</li>
+                  <li>Low-latency inference suitable for real-time operational deployment.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </li>
@@ -157,6 +170,19 @@
             </p>
             <div class="pub__links">
               <a class="pill" href="https://arxiv.org/abs/2303.04248">arXiv</a>
+              <button class="pill pill--toggle" type="button" aria-expanded="false" aria-controls="sum-tract">Summary</button>
+            </div>
+            <div class="pub__summary" id="sum-tract" hidden>
+              <div class="pub__summary-inner">
+                <p>Denoising diffusion models generate high-quality samples but typically require many network evaluations. TRACT (TRAnsitive Closure Time-distillation) extends binary time-distillation to reduce the number of sampling steps for a fixed architecture, substantially improving sample quality in the single-step regime.</p>
+                <h4>Key contributions</h4>
+                <ul>
+                  <li>TRACT, a new time-distillation method that generalizes binary time-distillation (BTD).</li>
+                  <li>Up to 2.4&times; better single-step FID than BTD on the same architecture.</li>
+                  <li>New single-step DDIM state of the art: FID 7.4 on ImageNet64 and 3.8 on CIFAR-10.</li>
+                  <li>Extensive ablations isolating the contribution of each component.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </li>
@@ -178,6 +204,19 @@
               <a class="pill" href="https://arxiv.org/abs/2006.09694">arXiv</a>
               <a class="pill" href="https://web.eecs.umich.edu/~stellayu/publication/doc/2022shapeSketchSlides.pdf">slides</a>
               <a class="pill" href="https://github.com/samaonline/3D-Shape-Reconstruction-from-Free-Hand-Sketches">code</a>
+              <button class="pill pill--toggle" type="button" aria-expanded="false" aria-controls="sum-sketch">Summary</button>
+            </div>
+            <div class="pub__summary" id="sum-sketch" hidden>
+              <div class="pub__summary-inner">
+                <p>Prior work on sketch-based 3D reconstruction assumes clean, distortion-free line drawings such as CAD renderings or edge maps. This paper tackles real free-hand sketches, motivated by interactive design and VR/AR applications. To overcome limited training data and highly varied drawing styles, it trains on synthesized sketches and introduces a module that standardizes sketch distortions and styles.</p>
+                <h4>Key contributions</h4>
+                <ul>
+                  <li>Studies 3D shape reconstruction from free-hand sketches rather than distortion-free line drawings.</li>
+                  <li>A data generation pipeline that synthesizes training sketches to address data scarcity.</li>
+                  <li>A sketch standardization module that handles diverse distortions and individual drawing styles.</li>
+                  <li>Strong generalization across varied free-hand sketches, with publicly released code.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </li>
@@ -199,6 +238,19 @@
               <a class="pill" href="https://arxiv.org/abs/2206.10816">arXiv</a>
               <a class="pill" href="https://sites.google.com/view/icml22-fighting-fire-with-fire/">website</a>
               <a class="pill" href="https://github.com/AlvinWen428/fighting-fire-with-fire">code</a>
+              <button class="pill pill--toggle" type="button" aria-expanded="false" aria-controls="sum-priming">Summary</button>
+            </div>
+            <div class="pub__summary" id="sum-priming" hidden>
+              <div class="pub__summary-inner">
+                <p>Deep networks often latch onto &ldquo;shortcut&rdquo; solutions that fail under small distribution shifts. This paper shows that supplying an additional <em>priming</em> feature &mdash; typically a coarse output estimate computed from key input features &mdash; steers networks away from poor shortcuts. Priming requires only approximate domain knowledge, such as prioritizing recent video frames or salient foreground pixels.</p>
+                <h4>Key contributions</h4>
+                <ul>
+                  <li>Priming: a simple, domain-informed input feature that helps DNNs avoid harmful shortcuts.</li>
+                  <li>Effective across classification and control: NICO image classification, MuJoCo continuous control, and CARLA autonomous driving.</li>
+                  <li>Outperforms popular state-of-the-art feature-selection and data-augmentation methods.</li>
+                  <li>A theoretical account: priming distracts the optimizer from poor shortcuts by offering better, simpler ones.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </li>
@@ -231,6 +283,18 @@
               <a class="pill" href="https://arxiv.org/abs/2106.06452">arXiv</a>
               <a class="pill" href="https://sites.google.com/view/keyframe-focused-imitation">website</a>
               <a class="pill" href="https://github.com/AlvinWen428/keyframe-focused-imitation-learning">code</a>
+              <button class="pill pill--toggle" type="button" aria-expanded="false" aria-controls="sum-keyframe">Summary</button>
+            </div>
+            <div class="pub__summary" id="sum-keyframe" hidden>
+              <div class="pub__summary-inner">
+                <p>In partially observed settings, imitation policies that use observation histories paradoxically often underperform policies that see only the latest frame, and prior fixes did not scale to visual imitation. This paper proposes upweighting demonstration keyframes &mdash; the points where the expert&rsquo;s action changes &mdash; a simple approach that scales to complex visual tasks.</p>
+                <h4>Key contributions</h4>
+                <ul>
+                  <li>A keyframe-upweighting scheme based on expert action changepoints that scales to visual imitation.</li>
+                  <li>Consistent improvements over all baselines on image-based MuJoCo continuous-control tasks.</li>
+                  <li>Effective imitation from observation histories in the CARLA driving simulator, resolving a long-standing issue in behavioral cloning for driving.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </li>
@@ -251,6 +315,18 @@
               <a class="pill" href="https://arxiv.org/abs/2010.14876">arXiv</a>
               <a class="pill" href="https://sites.google.com/view/fighting-copycat-agents/">website</a>
               <a class="pill" href="https://github.com/AlvinWen428/fighting-copycat-agents">code</a>
+              <button class="pill pill--toggle" type="button" aria-expanded="false" aria-controls="sum-copycat">Summary</button>
+            </div>
+            <div class="pub__summary" id="sum-copycat" hidden>
+              <div class="pub__summary-inner">
+                <p>When expert actions are strongly correlated over time, an imitation agent with access to observation histories can &ldquo;cheat&rdquo; by predicting the expert&rsquo;s previous action rather than the next one. This paper identifies this <em>copycat problem</em> as a common form of causal confusion and proposes an adversarial method to learn representations that discard excess information about the previous action while retaining what is needed to predict the next.</p>
+                <h4>Key contributions</h4>
+                <ul>
+                  <li>Identifies and characterizes the copycat problem in behavioral cloning from observation histories.</li>
+                  <li>An adversarial representation-learning approach that removes the previous-action nuisance correlate.</li>
+                  <li>Significant performance gains across a variety of partially observed imitation learning tasks.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </li>

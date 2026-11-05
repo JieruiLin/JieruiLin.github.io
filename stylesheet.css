@@ -452,6 +452,64 @@ a:hover { background-size: 100% 1px; }
   border-color: var(--accent);
 }
 
+/* Summary toggle + expandable panel */
+.pill--toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: transparent;
+}
+.pill--toggle::after {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.12em) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+.pill--toggle[aria-expanded="true"] { color: #fff; background: var(--accent); }
+.pill--toggle[aria-expanded="true"]::after { transform: translateY(0.1em) rotate(-135deg); }
+
+.pub__summary {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.35s ease, opacity 0.35s ease;
+}
+.pub__summary:not(.is-open) { grid-template-rows: 0fr; opacity: 0; }
+.pub__summary-inner { min-height: 0; overflow: hidden; }
+.pub__summary-inner > :first-child {
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border);
+}
+.pub__summary p,
+.pub__summary li { font-size: 0.9rem; color: var(--text-muted); }
+.pub__summary p { margin-bottom: 0.9rem; }
+.pub__summary h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.pub__summary ul { display: grid; gap: 0.35rem; }
+.pub__summary li { position: relative; padding-left: 1.1rem; }
+.pub__summary li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gradient);
+}
+
 .footnote { margin: 1.25rem 0 0; font-size: 0.85rem; color: var(--text-muted); }
 
 /* Honors / Service cards */
